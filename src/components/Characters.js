@@ -7,7 +7,7 @@ export default function Characters() {
 
   const fetchCharacters = async ({ queryKey }) => {
     const response = await fetch(
-      `https://ri3ckandmortyapi.com/api/character?page=${queryKey[1]}`
+      `https://rickandmortyapi.com/api/character?page=${queryKey[1]}`
     );
     return response.json();
   };
