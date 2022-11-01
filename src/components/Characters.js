@@ -48,7 +48,7 @@ export default function Characters() {
           Previous
         </button>
         <button
-          disabled={isPreviousData && !data.info.next}
+          disabled={isPreviousData || !data.info.next}
           onClick={() => setPage((old) => old + 1)}
         >
           Next
