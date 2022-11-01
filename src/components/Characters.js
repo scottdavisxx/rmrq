@@ -1,6 +1,6 @@
-import { useQuery } from "react-query";
-import Character from "./Character";
-import { useState } from "react";
+import { useQuery } from 'react-query';
+import Character from './Character';
+import { useState } from 'react';
 
 export default function Characters() {
   const [page, setPage] = useState(1);
@@ -13,7 +13,7 @@ export default function Characters() {
   };
 
   const { data, isPreviousData, isLoading, isError } = useQuery(
-    ["characters", page],
+    ['characters', page],
     fetchCharacters,
     {
       keepPreviousData: true,
@@ -22,7 +22,7 @@ export default function Characters() {
 
   if (isLoading) {
     return (
-      <div className="loading">
+      <div className='loading'>
         <h2>Loading...</h2>
       </div>
     );
@@ -30,7 +30,7 @@ export default function Characters() {
 
   if (isError) {
     return (
-      <div className="error">
+      <div className='error'>
         <h2>ERROR</h2>
       </div>
     );
@@ -39,12 +39,18 @@ export default function Characters() {
   // console.log(data);
 
   return (
-    <div className="characters">
+    <div className='characters'>
       {data.results.map((character) => (
-        <Character character={character} key={character.id} />
+        <Character
+          character={character}
+          key={character.id}
+        />
       ))}
       <div>
-        <button disabled={page === 1} onClick={() => setPage((old) => old - 1)}>
+        <button
+          disabled={page === 1}
+          onClick={() => setPage((old) => old - 1)}
+        >
           Previous
         </button>
         <button
