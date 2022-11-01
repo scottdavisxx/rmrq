@@ -13,6 +13,10 @@ h1 {
   font-size: 5rem;
 }
 
+h2 {
+  font-size: 4rem;
+}
+
 .characters {
   display: flex;
   flex-wrap: wrap;
@@ -39,6 +43,16 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: white;
+}
+
+.error {
+  background-color: rgb(36, 40, 46);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
 }
 
 .loading h3 {
